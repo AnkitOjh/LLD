@@ -18,9 +18,15 @@ public class VendingMachine {
         this.currentState.addMoney(amount);
     }
 
-    public void selectItem(int itemId){
+    public void selectItem(String itemId){
         this.currentState.selectItem(itemId);
     }
+
+    public void selectedItem(String itemId){
+
+    }
+
+
     public void setBalance(int amount){
         paymentProcessor.addMoney(amount);
     }
