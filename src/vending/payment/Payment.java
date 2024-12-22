@@ -6,4 +6,7 @@ public class Payment {
     public Payment(int amount){
         this.amount = amount;
     }
+    public double getAmount(){
+        return this.amount;
+    }
 }

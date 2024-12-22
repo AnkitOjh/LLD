@@ -1,3 +1,6 @@
+import vending.Product;
+import vending.VendingMachine;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,6 +34,20 @@ public class Main {
 //        }
 
         //
+        VendingMachine vendingMachine  =new VendingMachine();
+        Product product  =new Product();
+        product.setPrice(10);
+        product.setItemName("Kurkure");
+        Product product1  =new Product();
+        product1.setPrice(20);
+        product1.setItemName("Lays");
+        vendingMachine.addProduct(product,9);
+        vendingMachine.addProduct(product1,10);
+        vendingMachine.selectItem(product);
+        vendingMachine.addMoney(51);
+        vendingMachine.dispatch();
+        vendingMachine.selectItem(product);
+        vendingMachine.dispatch();
 
 
 

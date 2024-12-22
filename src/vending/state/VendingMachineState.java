@@ -1,10 +1,13 @@
 package vending.state;
 
-public interface VendingMachineState {
-    void addMoney(int amount);
-    void selectItem(String itemId);
+import vending.Inventory;
+import vending.Product;
 
-    void dispatchProduct();
+public interface VendingMachineState {
+    void addMoney(double amount);
+    void selectItem(Product product);
+
+    void dispatchProduct(Inventory inventory, Product selectedItem);
     void cancelTransaction();
 
 }
